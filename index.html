@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vivek Kumar Yadav | Portfolio</title>
+
+  <style>
+    :root {
+      --bg: #020617;
+      --card: #0f172a;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #38bdf8;
+      --accent-2: #22c55e;
+      --border: rgba(255,255,255,0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu;
+      background: radial-gradient(circle at top, #020617, #020617);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    header {
+      padding: 80px 20px 50px;
+      text-align: center;
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--accent);
+      box-shadow: 0 0 30px rgba(56,189,248,0.6);
+      margin-bottom: 18px;
+    }
+
+    header h1 {
+      font-size: clamp(32px, 5vw, 48px);
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      color: var(--muted);
+      max-width: 600px;
+      margin: auto;
+    }
+
+    nav {
+      margin-top: 24px;
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--border);
+      transition: all 0.25s ease;
+    }
+
+    nav a:hover {
+      background: rgba(56,189,248,0.15);
+      transform: translateY(-2px);
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      font-size: 22px;
+    }
+
+    .tag {
+      display: inline-block;
+      margin: 6px 6px 0 0;
+      padding: 5px 12px;
+      font-size: 12px;
+      border-radius: 999px;
+      background: rgba(56,189,248,0.15);
+      border: 1px solid rgba(56,189,248,0.35);
+      color: var(--accent);
+    }
+
+    .btn {
+      margin-top: 10px;
+      padding: 10px 18px;
+      border-radius: 14px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      background: linear-gradient(135deg, var(--accent), #60a5fa);
+      color: #020617;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(56,189,248,0.4);
+    }
+
+    .btn.secondary {
+      background: linear-gradient(135deg, var(--accent-2), #86efac);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 15px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(2,6,23,0.7);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+
+    .modal.open { display: flex; }
+
+    .modal-content {
+      max-width: 600px;
+      width: 100%;
+      animation: pop 0.3s ease;
+    }
+
+    @keyframes pop {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <img src="./vivek.jpg" alt="Vivek Kumar Yadav" class="profile-pic">
+  <h1>Vivek Kumar Yadav</h1>
+  <p>MCA Student | Beginner Programmer | Passionate about Technology</p>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#vision">Vision</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+  <section id="about" class="grid">
+    <div class="card">
+      <h2>About Me</h2>
+      <p>Hello! I am <strong>Vivek Kumar Yadav</strong>, an MCA student building strong fundamentals in programming, operating systems, and web development.</p>
+    </div>
+
+    <div class="card">
+      <h2>Education</h2>
+      <p><strong>Master of Computer Applications (MCA)</strong></p>
+      <p>Focused on software development, OS concepts, and computer fundamentals.</p>
+    </div>
+  </section>
+
+  <section id="skills" class="grid">
+    <div class="card">
+      <h2>Technical Skills</h2>
+      <span class="tag">HTML</span>
+      <span class="tag">CSS</span>
+      <span class="tag">JavaScript</span>
+      <span class="tag">Python (Basics)</span>
+      <span class="tag">C Programming</span>
+      <span class="tag">DSA (Basics)</span>
+    </div>
+
+    <div class="card">
+      <h2>Strengths</h2>
+      <ul>
+        <li>Consistent learner</li>
+        <li>Problem-solving mindset</li>
+        <li>Interest in future technologies</li>
+        <li>Strong discipline</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="card">
+      <h2>Projects & Practice</h2>
+      <ul>
+        <li>Basic Python & C programs</li>
+        <li>Static websites using HTML, CSS, JS</li>
+        <li>OS & DSA academic work</li>
+      </ul>
+      <button class="btn" onclick="openModal()">View Project Idea</button>
+    </div>
+  </section>
+
+  <section id="vision">
+    <div class="card">
+      <h2>My Vision</h2>
+      <p>I aim to create ethical and meaningful software that improves communication and learning.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="card">
+      <h2>Contact</h2>
+      <p>Email: <em>Available on request</em></p>
+      <p>Location: India</p>
+      <button class="btn secondary" onclick="alert('Thank you for visiting!')">Say Hello</button>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  © <span id="year"></span> Vivek Kumar Yadav
+</footer>
+
+<div class="modal" id="modal">
+  <div class="modal-content card">
+    <h2>Project Concept</h2>
+    <p>A respectful reminder app for focused family meetings with privacy-first design.</p>
+    <button class="btn" onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  function openModal() { document.getElementById("modal").classList.add("open"); }
+  function closeModal() { document.getElementById("modal").classList.remove("open"); }
+</script>
+
+</body>
+</html>
